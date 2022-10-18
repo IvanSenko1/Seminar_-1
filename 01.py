@@ -1,24 +1,8 @@
-# Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+# Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N
 
-def InputNumbers(inputText):
-    is_OK = False
-    while not is_OK:
-        try:
-            number = int(input(f"{inputText}"))
-            is_OK = True
-        except ValueError:
-            print("Это не число!")
-    return number
+n = int(input('введите число: '))
+factorial = 1
 
-
-def checkNumber(num):
-    if 6 <= num <= 7:
-        print("Выходной день")
-    elif 0 < num < 6:
-        print("Рабочий день")
-    else:
-        print("В неделе 7 дней")
-
-
-num = InputNumbers("Введите число: ")
-checkNumber(num)
+for i in range(1, n+1):
+    factorial *= i
+    print(factorial, end=' ')
